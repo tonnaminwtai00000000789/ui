@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "real": {
+      "type": "stdio",
+      "command": "C:\\Users\\zelda\\AppData\\Local\\Real\\data\\mcp\\real-mcp.exe",
+      "args": []
+    }
+  }
+}

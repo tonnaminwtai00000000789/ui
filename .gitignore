@@ -1,0 +1,16 @@
+# Build output
+dist/
+
+# darklua binary
+darklua/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
