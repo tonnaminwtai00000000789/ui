@@ -1,17 +1,17 @@
 """
-build.py — Python wrapper สำหรับ build pipeline ของ WindUI
+build.py — Python wrapper สำหรับ build pipeline ของ
 ใช้ darklua ในการ bundle + minify (เหมือน build/build.sh)
 
 Usage:
-    python tools/build.py            # production build (darklua full minify)
-    python tools/build.py --dev      # dev build (bundle only, no minify)
-    python tools/build.py --check    # ตรวจว่า dist/main.lua ยัง up-to-date ไหม
-    python tools/build.py --pkg      # re-generate build/package.lua เท่านั้น
+    python tools/build.py    
+    python tools/build.py --dev   
+    python tools/build.py --check 
+    python tools/build.py --pkg
 
 Requirements:
-    - darklua (https://darklua.com) ต้องอยู่ใน PATH
-    - Node.js (สำหรับอ่าน package.json และ render header)
-      หรือใช้ --no-node เพื่อ skip header
+    - darklua (https://darklua.com) 
+    - Node.js 
+       --no-node for skip header
 """
 
 from __future__ import annotations
@@ -96,7 +96,7 @@ def run_darklua(input_path: Path, output_path: Path, config: Path) -> bool:
 # --------------------------------------------------------------------------- #
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Build WindUI into dist/main.lua via darklua.")
+    parser = argparse.ArgumentParser(description="Build into dist/main.lua via darklua.")
     parser.add_argument("--dev", action="store_true", help="Dev build: bundle only, no minification")
     parser.add_argument("--check", action="store_true", help="Fail if dist/main.lua is missing")
     parser.add_argument("--pkg", action="store_true", help="Only regenerate build/package.lua")
@@ -142,7 +142,7 @@ def main() -> int:
     OUTPUT.write_text(header + "\n" + bundled, encoding="utf-8")
 
     size_kb = OUTPUT.stat().st_size // 1024
-    print(f"[ ✓ ] WindUI build completed")
+    print(f"[ ✓ ] build completed")
     print(f"[ > ] Version  : {pkg.get('version', '?')}")
     print(f"[ > ] Mode     : {mode_label}")
     print(f"[ > ] Size     : {size_kb} KB")

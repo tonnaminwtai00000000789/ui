@@ -2,12 +2,12 @@
 
 return [[
 {
-  "name": "windui",
+  "name": "privateui",
   "version": "1.0.0",
   "main": "./dist/main.lua",
-  "repository": "https://github.com/yourusername/WindUI",
+  "repository": "https://github.com/xxx",
   "discord": "",
-  "author": "yourusername",
+  "author": "tonnaminwza000000000000000000789",
   "description": "Roblox UI Library for scripts",
   "license": "MIT",
   "scripts": {
